@@ -10,23 +10,15 @@ function App() {
     fetch("/api/users")
       .then(res => res.json())
       .then(json => setUsers(json.users));
-    // Specify how to clean up after this effect:
     return () => {};
-  }, []); // empty 2nd arg - only runs once
+  }, []);
 
   return (
     <div className="App">
       <header className="App-header">
         <h1>React Node Template</h1>
         <p>
-          <a
-            className="App-link"
-            href="https://github.com/mattvukas/react-node-template"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://github.com/mattvukas/react-node-template
-          </a>
+          Good dole LambastR
         </p>
         <div className="logo-box">
           <img src={logo} className="App-logo" alt="logo" />
@@ -44,37 +36,7 @@ function App() {
           <code>GET /api/users</code>:{" "}
           {users.length ? users.join(", ") : "loading..."}
         </p>
-        <br />
-        <p>
-          Docs:{" "}
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://nodejs.org/en/docs/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Node.js
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://expressjs.com/en/4x/api.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Express.js
-          </a>
-        </p>
-      </header>
+        <br />      </header>
     </div>
   );
 }
